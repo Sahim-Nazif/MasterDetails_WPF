@@ -20,6 +20,10 @@ namespace MasterDetails_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        EventsTrackingDataSetTableAdapters.tbl_locationTableAdapter location =
+            new EventsTrackingDataSetTableAdapters.tbl_locationTableAdapter();
+        EventsTrackingDataSetTableAdapters.tbl_eventTableAdapter events=
+        new EventsTrackingDataSetTableAdapters.tbl_eventTableAdapter();
         public MainWindow()
         {
             InitializeComponent();
