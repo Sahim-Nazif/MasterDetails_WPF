@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
      
-        <DataGrid x:Name="SupervisorGrid" AutoGenerateColumns="False" Grid.Column="0" 
+        <DataGrid x:Name="LocationGrid" AutoGenerateColumns="False" Grid.Column="0" 
                   Margin="20,50,20,200" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}">
 
             <DataGrid.Columns>
@@ -20,14 +20,14 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <DataGrid x:Name="TeamGrid"  AutoGenerateColumns="False" Grid.Column="0" 
+        <DataGrid x:Name="EventGrid"  AutoGenerateColumns="False" Grid.Column="0" 
                   Margin="20,240,20,20" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Event ID" Binding="{Binding Path=Supervisor_Team/Team_Id}" MinWidth="100"/>
-                <DataGridTextColumn Header="Event Name" Binding="{Binding Path=Supervisor_Team/Team_lead_name}" MinWidth="120"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding Path=Supervisor_Team/Section}" MinWidth="100"/>
-                <DataGridTextColumn Header="Organizer" Binding="{Binding Path=Supervisor_Team/NumberOfEmployees}" MinWidth="140"/>
-                <DataGridTextColumn Header="Host" Binding="{Binding Path=Supervisor_Team/NumberOfEmployees}" MinWidth="140"/>
+                <DataGridTextColumn Header="Event ID" Binding="{Binding Path=tbl_event_tbl_location/EventID}" MinWidth="100"/>
+                <DataGridTextColumn Header="Event Name" Binding="{Binding Path=tbl_event_tbl_location/EventName}" MinWidth="120"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Path=tbl_event_tbl_location/Date}" MinWidth="100"/>
+                <DataGridTextColumn Header="Organizer" Binding="{Binding Path=tbl_event_tbl_location/Organizer}" MinWidth="140"/>
+                <DataGridTextColumn Header="Host" Binding="{Binding Path=tbl_event_tbl_location/Host}" MinWidth="140"/>
             </DataGrid.Columns>
 
         </DataGrid>
