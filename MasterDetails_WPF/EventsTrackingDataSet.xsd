@@ -218,7 +218,7 @@ SELECT LocationID, LocationName, City, Capacity, Cost FROM tbl_location WHERE (L
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="tbl_location_tbl_event" msdata:parent="tbl_location" msdata:child="tbl_event" msdata:parentkey="LocationID" msdata:childkey="LocationID" msprop:Generator_UserChildTable="tbl_event" msprop:Generator_ChildPropName="Gettbl_eventRows" msprop:Generator_UserRelationName="tbl_location_tbl_event" msprop:Generator_RelationVarName="relationtbl_location_tbl_event" msprop:Generator_UserParentTable="tbl_location" msprop:Generator_ParentPropName="tbl_locationRow" />
+      <msdata:Relationship name="Event_Location" msdata:parent="tbl_location" msdata:child="tbl_event" msdata:parentkey="LocationID" msdata:childkey="LocationID" msprop:Generator_UserChildTable="tbl_event" msprop:Generator_ChildPropName="Gettbl_eventRows" msprop:Generator_UserRelationName="Event_Location" msprop:Generator_RelationVarName="relationEvent_Location" msprop:Generator_UserParentTable="tbl_location" msprop:Generator_ParentPropName="tbl_locationRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

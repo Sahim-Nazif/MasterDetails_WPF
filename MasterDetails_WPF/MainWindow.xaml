@@ -23,11 +23,11 @@
         <DataGrid x:Name="EventGrid"  AutoGenerateColumns="False" Grid.Column="0" 
                   Margin="20,240,20,20" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Event ID" Binding="{Binding Path=tbl_event_tbl_location/EventID}" MinWidth="100"/>
-                <DataGridTextColumn Header="Event Name" Binding="{Binding Path=tbl_event_tbl_location/EventName}" MinWidth="120"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding Path=tbl_event_tbl_location/Date}" MinWidth="100"/>
-                <DataGridTextColumn Header="Organizer" Binding="{Binding Path=tbl_event_tbl_location/Organizer}" MinWidth="140"/>
-                <DataGridTextColumn Header="Host" Binding="{Binding Path=tbl_event_tbl_location/Host}" MinWidth="140"/>
+                <DataGridTextColumn Header="Event ID" Binding="{Binding Path=Event_Location/EventID}" MinWidth="100"/>
+                <DataGridTextColumn Header="Event Name" Binding="{Binding Path=Event_Location/EventName}" MinWidth="120"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Path=Event_Location/Date}" MinWidth="100"/>
+                <DataGridTextColumn Header="Organizer" Binding="{Binding Path=Event_Location/Organizer}" MinWidth="140"/>
+                <DataGridTextColumn Header="Host" Binding="{Binding Path=Event_Location/Host}" MinWidth="140"/>
             </DataGrid.Columns>
 
         </DataGrid>

@@ -29,6 +29,15 @@ namespace MasterDetails_WPF
         public MainWindow()
         {
             InitializeComponent();
+
+            eventsTracking = new EventsTrackingDataSet();
+            location.Fill(eventsTracking.tbl_location);
+            events.Fill(eventsTracking.tbl_event);
+            this.DataContext = eventsTracking.tbl_location;
+
+
+
+
         }
     }
 }

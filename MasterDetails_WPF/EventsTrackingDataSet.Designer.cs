@@ -28,7 +28,7 @@ namespace MasterDetails_WPF {
         
         private tbl_locationDataTable tabletbl_location;
         
-        private global::System.Data.DataRelation relationtbl_location_tbl_event;
+        private global::System.Data.DataRelation relationEvent_Location;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -220,7 +220,7 @@ namespace MasterDetails_WPF {
                     this.tabletbl_location.InitVars();
                 }
             }
-            this.relationtbl_location_tbl_event = this.Relations["tbl_location_tbl_event"];
+            this.relationEvent_Location = this.Relations["Event_Location"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -235,10 +235,10 @@ namespace MasterDetails_WPF {
             base.Tables.Add(this.tabletbl_event);
             this.tabletbl_location = new tbl_locationDataTable();
             base.Tables.Add(this.tabletbl_location);
-            this.relationtbl_location_tbl_event = new global::System.Data.DataRelation("tbl_location_tbl_event", new global::System.Data.DataColumn[] {
+            this.relationEvent_Location = new global::System.Data.DataRelation("Event_Location", new global::System.Data.DataColumn[] {
                         this.tabletbl_location.LocationIDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_event.LocationIDColumn}, false);
-            this.Relations.Add(this.relationtbl_location_tbl_event);
+            this.Relations.Add(this.relationEvent_Location);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -451,7 +451,7 @@ namespace MasterDetails_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_eventRow Addtbl_eventRow(string EventName, System.DateTime Date, string Organizer, string Host, tbl_locationRow parenttbl_locationRowBytbl_location_tbl_event) {
+            public tbl_eventRow Addtbl_eventRow(string EventName, System.DateTime Date, string Organizer, string Host, tbl_locationRow parenttbl_locationRowByEvent_Location) {
                 tbl_eventRow rowtbl_eventRow = ((tbl_eventRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -460,8 +460,8 @@ namespace MasterDetails_WPF {
                         Organizer,
                         Host,
                         null};
-                if ((parenttbl_locationRowBytbl_location_tbl_event != null)) {
-                    columnValuesArray[5] = parenttbl_locationRowBytbl_location_tbl_event[0];
+                if ((parenttbl_locationRowByEvent_Location != null)) {
+                    columnValuesArray[5] = parenttbl_locationRowByEvent_Location[0];
                 }
                 rowtbl_eventRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbl_eventRow);
@@ -1071,10 +1071,10 @@ namespace MasterDetails_WPF {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public tbl_locationRow tbl_locationRow {
                 get {
-                    return ((tbl_locationRow)(this.GetParentRow(this.Table.ParentRelations["tbl_location_tbl_event"])));
+                    return ((tbl_locationRow)(this.GetParentRow(this.Table.ParentRelations["Event_Location"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tbl_location_tbl_event"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["Event_Location"]);
                 }
             }
             
@@ -1209,11 +1209,11 @@ namespace MasterDetails_WPF {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public tbl_eventRow[] Gettbl_eventRows() {
-                if ((this.Table.ChildRelations["tbl_location_tbl_event"] == null)) {
+                if ((this.Table.ChildRelations["Event_Location"] == null)) {
                     return new tbl_eventRow[0];
                 }
                 else {
-                    return ((tbl_eventRow[])(base.GetChildRows(this.Table.ChildRelations["tbl_location_tbl_event"])));
+                    return ((tbl_eventRow[])(base.GetChildRows(this.Table.ChildRelations["Event_Location"])));
                 }
             }
         }
