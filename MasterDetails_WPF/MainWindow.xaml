@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+     
+        <DataGrid x:Name="SupervisorGrid" AutoGenerateColumns="False" Grid.Column="0" 
+                  Margin="20,50,20,200" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Location ID" Binding="{Binding Path=LocationID}" MinWidth="80"/>
+                <DataGridTextColumn Header="Location Name" Binding="{Binding Path=LocationName}" MinWidth="120"/>
+                <DataGridTextColumn Header="City" Binding="{Binding Path=City}" MinWidth="120"/>
+                <DataGridTextColumn Header="Capacity" Binding="{Binding Path=Capacity}" MinWidth="120"/>
+                <DataGridTextColumn Header="Cost" Binding="{Binding Path=Cost}" MinWidth="120"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <DataGrid x:Name="TeamGrid"  AutoGenerateColumns="False" Grid.Column="0" 
+                  Margin="20,240,20,20" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Event ID" Binding="{Binding Path=Supervisor_Team/Team_Id}" MinWidth="100"/>
+                <DataGridTextColumn Header="Event Name" Binding="{Binding Path=Supervisor_Team/Team_lead_name}" MinWidth="120"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Path=Supervisor_Team/Section}" MinWidth="100"/>
+                <DataGridTextColumn Header="Organizer" Binding="{Binding Path=Supervisor_Team/NumberOfEmployees}" MinWidth="140"/>
+                <DataGridTextColumn Header="Host" Binding="{Binding Path=Supervisor_Team/NumberOfEmployees}" MinWidth="140"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
     </Grid>
 </Window>
